@@ -52,8 +52,7 @@ class BeggarController extends Controller
         $tips = $beggar->tips()->where('status', 'paid')->latest()->take(20)->get();
         $qrCode = QrCode::format('svg')
             ->size(250)
-            ->color(146, 64, 14)
-            ->backgroundColor(255, 251, 235)
+            ->margin(2)
             ->generate(route('tip.show', $beggar->unique_code));
 
         return view('admin.beggars.show', compact('beggar', 'tips', 'qrCode'));
@@ -104,7 +103,6 @@ class BeggarController extends Controller
         $qrCode = QrCode::format('svg')
             ->size(600)
             ->margin(2)
-            ->color(146, 64, 14)
             ->generate(route('tip.show', $beggar->unique_code));
 
         return response($qrCode)
