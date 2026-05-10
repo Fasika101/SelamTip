@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Thank You! — SelemaTip')
+@section('title', 'Thank You! — ' . config('app.name'))
 
 @section('content')
 <div class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100 flex flex-col overflow-hidden" id="successPage">
@@ -117,7 +117,7 @@
             </div>
 
             <p class="text-center text-xs text-gray-400 mt-6">
-                Powered by <span class="font-semibold text-brand-700">SelemaTip</span> · 🇪🇹
+                Powered by <span class="font-semibold text-brand-700">{{ config('app.name') }}</span> · 🇪🇹
             </p>
         </div>
     </div>
@@ -183,9 +183,9 @@
 
 // Share
 function shareTip() {
-    const text = "I just tipped {{ $tip->beggar->name }} on SelemaTip! 🇪🇹❤️ Scan their QR code to help too. #SelemaTip #Ethiopia";
+    const text = "I just tipped {{ $tip->beggar->name }} on {{ config('app.name') }}! 🇪🇹❤️ Scan their QR code to help too. #{{ config('app.name') }} #Ethiopia";
     if (navigator.share) {
-        navigator.share({ title: 'SelemaTip', text });
+        navigator.share({ title: '{{ config('app.name') }}', text });
     } else {
         navigator.clipboard.writeText(text).then(() => alert('Copied to clipboard!'));
     }

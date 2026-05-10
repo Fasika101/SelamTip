@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login — SelemaTip</title>
+    <title>Admin Login — {{ config('app.name') }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -30,7 +30,7 @@
                 <div class="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
                     <span class="text-amber-900 font-black text-3xl">S</span>
                 </div>
-                <h1 class="text-white font-black text-3xl">SelemaTip</h1>
+                <h1 class="text-white font-black text-3xl">{{ config('app.name') }}</h1>
                 <p class="text-amber-300 text-sm mt-1">Admin Panel · 🇪🇹 Ethiopia</p>
             </div>
 
@@ -98,7 +98,7 @@
             </div>
 
             <p class="text-center text-amber-400 text-xs mt-6">
-                SelemaTip · Helping those in need 🇪🇹
+                {{ config('app.name') }} · Helping those in need 🇪🇹
             </p>
         </div>
     </div>

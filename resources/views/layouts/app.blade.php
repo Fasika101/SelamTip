@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'SelemaTip — Tip with Heart')</title>
-    <meta name="description" content="SelemaTip — Help those in need with a quick mobile tip in Ethiopia.">
+    <title>@yield('title', config('app.name') . ' — Tip with Heart')</title>
+    <meta name="description" content="{{ config('app.name') }} — Help those in need with a quick mobile tip in Ethiopia.">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Tip ' . $beggar->name . ' — SelemaTip')
+@section('title', 'Tip ' . $beggar->name . ' — ' . config('app.name'))
 
 @section('content')
 <div class="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex flex-col">
@@ -11,7 +11,7 @@
     <!-- Header -->
     <div class="text-center pt-6 pb-2 px-4">
         <span class="inline-flex items-center gap-2 text-brand-800 font-bold text-lg tracking-tight">
-            <span class="text-2xl">🤲</span> SelemaTip
+            <span class="text-2xl">🤲</span> {{ config('app.name') }}
         </span>
     </div>
 
@@ -167,7 +167,7 @@
 
             <!-- Footer note -->
             <p class="text-center text-xs text-gray-400 mt-6">
-                Powered by <span class="font-semibold text-brand-700">SelemaTip</span> · Help those in need
+                Powered by <span class="font-semibold text-brand-700">{{ config('app.name') }}</span> · Help those in need
             </p>
         </div>
     </div>

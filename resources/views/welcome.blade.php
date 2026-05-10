@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SelemaTip — Tip with Heart 🇪🇹</title>
+    <title>{{ config('app.name') }} — Tip with Heart 🇪🇹</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -97,7 +97,7 @@
     <!-- Footer -->
     <footer class="bg-amber-900 text-amber-100 py-10 px-6 text-center">
         <div class="text-3xl mb-3">🇪🇹</div>
-        <p class="font-bold text-xl mb-1 text-white">SelemaTip</p>
+        <p class="font-bold text-xl mb-1 text-white">{{ config('app.name') }}</p>
         <p class="text-amber-300 text-sm">Connecting kindness with those who need it most.</p>
         <div class="eth-stripe h-1 w-32 mx-auto mt-6 rounded-full"></div>
     </footer>

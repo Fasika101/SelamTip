@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Admin') — SelemaTip</title>
+    <title>@yield('title', 'Admin') — {{ config('app.name') }}</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -34,7 +34,7 @@
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-amber-400 rounded-xl flex items-center justify-center text-brand-900 font-black text-lg">S</div>
                 <div>
-                    <div class="font-bold text-lg leading-none">SelemaTip</div>
+                    <div class="font-bold text-lg leading-none">{{ config('app.name') }}</div>
                     <div class="text-brand-300 text-xs mt-0.5">Admin Panel</div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
         <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between shadow-sm">
             <h1 class="text-xl font-bold text-gray-800">@yield('page-title', 'Dashboard')</h1>
             <div class="flex items-center gap-3">
-                <span class="text-sm text-gray-500 hidden sm:block">SelemaTip Admin</span>
+                <span class="text-sm text-gray-500 hidden sm:block">{{ config('app.name') }} Admin</span>
                 <form method="POST" action="{{ route('admin.logout') }}">
                     @csrf
                     <button type="submit"
