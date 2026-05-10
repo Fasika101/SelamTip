@@ -101,14 +101,14 @@ class BeggarController extends Controller
 
     public function qrDownload(Beggar $beggar)
     {
-        $qrCode = QrCode::format('png')
+        $qrCode = QrCode::format('svg')
             ->size(600)
             ->margin(2)
             ->color(146, 64, 14)
             ->generate(route('tip.show', $beggar->unique_code));
 
         return response($qrCode)
-            ->header('Content-Type', 'image/png')
-            ->header('Content-Disposition', 'attachment; filename="qr-' . $beggar->unique_code . '.png"');
+            ->header('Content-Type', 'image/svg+xml')
+            ->header('Content-Disposition', 'attachment; filename="qr-' . $beggar->unique_code . '.svg"');
     }
 }

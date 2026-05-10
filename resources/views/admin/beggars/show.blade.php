@@ -67,7 +67,7 @@
             <a href="{{ route('admin.beggars.qr', $beggar) }}"
                class="w-full flex items-center justify-center gap-2 py-3 bg-brand-800 hover:bg-brand-700 text-white rounded-xl font-semibold text-sm transition-colors shadow-md">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Download QR Code
+                Download QR Code (SVG)
             </a>
         </div>
     </div>
