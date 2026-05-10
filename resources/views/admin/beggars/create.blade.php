@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', 'New Profile')
-@section('page-title', 'Create New Profile')
+@section('page-title', 'Add New Profile')
 
 @section('content')
 <div class="max-w-xl mx-auto">

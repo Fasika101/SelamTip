@@ -33,21 +33,23 @@
 
             <!-- Profile info -->
             <div class="px-5 pb-5">
-                <div class="flex items-end gap-3 -mt-8 mb-3">
+                <!-- Photo + status badge row -->
+                <div class="flex items-start justify-between -mt-8 mb-3">
                     <img src="{{ $beggar->photo_url }}"
                          onerror="this.src='https://ui-avatars.com/api/?name={{ urlencode($beggar->name) }}&background=b45309&color=fff&size=80'"
                          class="w-16 h-16 rounded-2xl border-4 border-white shadow-md object-cover flex-shrink-0">
-                    <div class="pb-1 min-w-0">
-                        <h3 class="font-bold text-gray-900 truncate">{{ $beggar->name }}</h3>
-                        <p class="text-xs text-gray-400 flex items-center gap-1">🇪🇹 {{ $beggar->city }}</p>
-                    </div>
-                    <div class="ml-auto pb-1">
+                    <div class="mt-9">
                         @if($beggar->is_active)
                             <span class="bg-green-50 text-green-700 text-xs font-semibold px-2 py-1 rounded-full border border-green-100">Active</span>
                         @else
                             <span class="bg-gray-50 text-gray-500 text-xs font-semibold px-2 py-1 rounded-full border border-gray-100">Inactive</span>
                         @endif
                     </div>
+                </div>
+                <!-- Name + city below photo -->
+                <div class="mb-3">
+                    <h3 class="font-bold text-gray-900 text-base">{{ $beggar->name }}</h3>
+                    <p class="text-xs text-gray-400 flex items-center gap-1 mt-0.5">🇪🇹 {{ $beggar->city }}</p>
                 </div>
 
                 <!-- Stats row -->
