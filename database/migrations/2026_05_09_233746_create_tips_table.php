@@ -1,0 +1,28 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('tips', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('beggar_id')->constrained()->onDelete('cascade');
+            $table->string('phone');
+            $table->decimal('amount', 10, 2);
+            $table->string('tx_ref')->unique();
+            $table->enum('status', ['pending', 'paid', 'failed'])->default('pending');
+            $table->string('lotto_number')->nullable();
+            $table->string('chapa_checkout_url')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('tips');
+    }
+};
